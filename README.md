@@ -9,9 +9,11 @@
 ## Features
 
 - 📊 **Weight Distribution Analysis** — Histograms, scatter plots, frequency analysis
-- 🗜️ **Compression Simulation** — Quantization, bit-width reduction, lookup tables
+- 🗜️ **Compression Simulation** — Quantization, bit-width reduction, lookup tables, fixed-point analysis
 - ✂️ **Pruning Studies** — Magnitude-based, frequency-based, low-count removal
 - ✂️ **Clip & Normalize** — Dynamic range reduction for quantization optimization
+- 🔎 **Query System** — Presets + custom filters for rapid exploration
+- ⚖️ **Model Comparison** — Side-by-side distribution analysis
 - 💾 **Export & Compare** — Parquet/CSV/JSON export, multi-model comparison
 
 ## Supported Models
@@ -35,3 +37,26 @@ pip install -r requirements.txt
 python app.py
 ```
 The app will open at http://127.0.0.1:7860 in your browser automatically.
+
+### 📚 Documentation
+
+[![Features Guide](./docs/features.md)] — Complete feature documentation
+[![Compression Guide](./docs/compression_guide.md)] — Compression research methodology
+[![Pruning Guide](./docs/pruning_guide.md)] — Pruning research methodology
+[![Example Analysis](./examples/amd-llama-135m-analysis.md)] — Real-world case study
+
+## 🧪 Testing
+
+```bash
+# Run unit tests
+python -m pytest tests/test_analyzer.py -v
+
+# Expected: 17 passed, 0 warnings
+```
+
+## 🤝 Contributing
+Contributions welcome! See CONTRIBUTING.md for guidelines.
+
+## 📄 License
+
+AGPL-3.0 License — see [![LICENSE](./LICENSE)] for details.
