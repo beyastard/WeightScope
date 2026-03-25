@@ -40,10 +40,13 @@ The app will open at http://127.0.0.1:7860 in your browser automatically.
 
 ### 📚 Documentation
 
-[![Features Guide](./docs/features.md)] — Complete feature documentation
-[![Compression Guide](./docs/compression_guide.md)] — Compression research methodology
-[![Pruning Guide](./docs/pruning_guide.md)] — Pruning research methodology
-[![Example Analysis](./examples/amd-llama-135m-analysis.md)] — Real-world case study
+[[Features Guide](./docs/features.md)] — Complete feature documentation
+
+[[Compression Guide](./docs/compression_guide.md)] — Compression research methodology
+
+[[Pruning Guide](./docs/pruning_guide.md)] — Pruning research methodology
+
+[[Example Analysis](./examples/amd-llama-135m-analysis.md)] — Real-world case study
 
 ## 🧪 Testing
 
