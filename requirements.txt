@@ -12,7 +12,7 @@ kaleido>=0.2.1           # PNG export
 # HF & System
 huggingface_hub>=0.20.0
 psutil>=5.9.0            # Memory estimation
-tqdm>=4.66.0
+tqdm>=4.66.0             # (optional - I didn't use it)
 
 # Optional (Advanced)
 numba>=0.58.0            # JIT for large-data ops
