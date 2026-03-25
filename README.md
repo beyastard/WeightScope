@@ -28,7 +28,7 @@ Any `.safetensors` format model:
 ```bash
 git clone https://github.com/beyastard/WeightScope
 cd WeightScope
-python -m venv .ven
+python -m venv .venv
 .venv\Scripts\activate.bat
 python -m pip install --upgrade pip
 pip install -r requirements.txt
