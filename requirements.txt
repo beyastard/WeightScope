@@ -1,0 +1,19 @@
+# Core
+safetensors>=0.4.0
+numpy>=2.0.0
+pandas>=2.0.0
+pyarrow>=14.0.0          # Parquet I/O
+
+# UI & Viz
+gradio>=4.0.0
+plotly>=5.18.0
+kaleido>=0.2.1           # PNG export
+
+# HF & System
+huggingface_hub>=0.20.0
+psutil>=5.9.0            # Memory estimation
+tqdm>=4.66.0
+
+# Optional (Advanced)
+numba>=0.58.0            # JIT for large-data ops
+scipy>=1.11.0            # Statistical tests for outlier detection
