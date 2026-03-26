@@ -1059,7 +1059,7 @@ def build_app():
     loader = ModelLoader()
     cache = SessionCache()
     
-    with gr.Blocks(title=f"AMD-Llama Analyzer v{APP_VERSION}", theme=gr.themes.Soft()) as demo:
+    with gr.Blocks(title=f"WeightScope v{APP_VERSION}", theme=gr.themes.Soft()) as demo:
         gr.Markdown(f"""
         # 🔍 WeightScope v{APP_VERSION}
         ### Research tool for weight distribution analysis, compression studies, and pruning evaluation
@@ -1133,7 +1133,7 @@ def build_app():
         show_single.change(fn=on_scatter_update, inputs=[current_df, show_single, show_outliers], outputs=[scatter_plot])
         show_outliers.change(fn=on_scatter_update, inputs=[current_df, show_single, show_outliers], outputs=[scatter_plot])
         
-        gr.Markdown("""
+        gr.Markdown(f"""
         ---
         **WeightScope v{APP_VERSION}** | SafeTensors Model Analyzer
         - Analysis is cached in `.save_state/` - re-loading the same model is instant
@@ -1149,6 +1149,7 @@ def build_app():
 # ============================================================================
 
 if __name__ == "__main__":
+    print(f"DEBUG: Type is {type(APP_VERSION)} and value is {APP_VERSION}")
     print(f"🚀 WeightScope v{APP_VERSION}")
     print(f"📊 SafeTensors Model Analyzer")
     print(f"📁 Cache directory: {SAVE_STATE_DIR.absolute()}")

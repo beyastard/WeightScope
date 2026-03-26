@@ -62,4 +62,4 @@ Contributions welcome! See CONTRIBUTING.md for guidelines.
 
 ## 📄 License
 
-AGPL-3.0 License — see [![LICENSE](./LICENSE)] for details.
+AGPL-3.0 License — see [[LICENSE](./LICENSE)] for details.

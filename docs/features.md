@@ -109,12 +109,12 @@ Powerful filtering and search capabilities for weight exploration.
 #### Query Presets
 | Preset | Description |
 |--------|-------------|
-| 🌱 Pruning Candidates | |v| < 1e-4 |
+| 🌱 Pruning Candidates | \|v\| < 1e-4 |
 | 🔍 Singletons | count = 1 |
 | 📉 Rare Values | count 1-10 |
 | 📈 High-Frequency | count > 10,000 |
-| 🎯 Near Zero | |v| < 1e-3 |
-| ⚡ Extreme Values | |v| > 5 |
+| 🎯 Near Zero | \|v\| < 1e-3 |
+| ⚡ Extreme Values | \|v\| > 5 |
 | 🗑️ Low-Count Removal | count ≤ 4 |
 | Custom | Manual filter configuration |
 
