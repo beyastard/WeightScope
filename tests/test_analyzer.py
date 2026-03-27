@@ -9,6 +9,8 @@ Usage:
     # or
     python tests/test_analyzer.py
 
+---
+
 Copyright (C) 2026 Bryan K Reinhart & BeySoft
 
 This file is part of WeightScope.
