@@ -118,7 +118,7 @@ def create_export_tab(cache: SessionCache):
                    vmin: float, vmax: float, log_y: bool,
                    singletons: bool, outliers: bool) -> str:
         if df is None:
-            return "❌ No model loaded — load and analyse a model first"
+            return "❌ No model loaded — load and analyze a model first"
 
         out_path = Path(out_dir)
         out_path.mkdir(parents=True, exist_ok=True)

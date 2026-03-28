@@ -91,7 +91,7 @@ def create_load_model_tab(loader: ModelLoader, cache: SessionCache):
                 placeholder="amd/AMD-Llama-135m",
             )
 
-        load_btn           = gr.Button("🚀 Load & Analyse", variant="primary", size="lg")
+        load_btn           = gr.Button("🚀 Load & Analyze", variant="primary", size="lg")
         load_status        = gr.Textbox(label="Status", interactive=False, lines=3)
         model_info_display = gr.Textbox(label="Model Info", interactive=False)
         mem_estimate_json  = gr.JSON(label="Memory Estimate")

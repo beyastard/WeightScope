@@ -42,13 +42,13 @@ is called – use them as inputs to your event handlers if needed.
     def mount(self, demo: gr.Blocks) -> None:
         with gr.Tab("📐 My Tab"):
             out = gr.JSON()
-            gr.Button("Analyse").click(
-                fn=self._analyse,
+            gr.Button("Analyze").click(
+                fn=self._analyze,
                 inputs=[self.state["current_df"]],
                 outputs=[out],
             )
 
-    def _analyse(self, df):
+    def _analyze(self, df):
         if df is None:
             return {"error": "No model loaded"}
         return {"rows": len(df)}

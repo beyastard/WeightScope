@@ -63,7 +63,7 @@ def create_overview_tab():
 | **Total Parameters** | {format_number(total)} |
 | **Unique Value Patterns** | {format_number(unique)} |
 | **Tensor Count** | {tensors} |
-| **Dtypes Analysed** | `{dtypes}` |
+| **Dtypes Analyzed** | `{dtypes}` |
 | **Analysis Date** | {ts} |
 | **File Hash (first 16)** | `{fhash}…` |{skipped_row}
 """

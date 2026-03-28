@@ -38,14 +38,14 @@ Note: this `README.md` may be slightly out of date.
 ## Overview
 
 WeightScope loads `.safetensors` model files — locally or directly from the
-HuggingFace Hub — and analyses every weight value at the bit-pattern level.
+HuggingFace Hub — and analyzes every weight value at the bit-pattern level.
 Instead of sampling or approximating, it counts **every unique floating-point
 or integer pattern** that appears in the model, producing an exact frequency
 table that drives all downstream analysis.
 
 Analysis is **streaming and memory-bounded**: tensors are processed one at a
 time and frequency counts are accumulated in a temporary DuckDB database.
-Models of any size can be analysed on modest hardware — the peak RAM footprint
+Models of any size can be analyzed on modest hardware — the peak RAM footprint
 is determined by the largest single tensor, not the total model size.  Both
 single-file and **sharded** models are supported.
 
@@ -74,7 +74,7 @@ Typical use cases:
 | 🗜️ **Compression** | Uniform quantization simulation (4–16 bit, incl. INT4/INT8) and low-count removal impact |
 | ✂️ **Pruning** | Live sparsity analysis — see exactly how many parameters fall below any threshold ε |
 | ✂️ **Clip & Normalize** | Simulate clipping outliers and normalizing to [−1, 1]; reports MSE, MAE, SNR, bits saved |
-| ⚖️ **Compare** | Side-by-side distribution overlay of two exported analyses |
+| ⚖️ **Compare** | Side-by-side distribution overlay of two exported analyzes |
 | 💾 **Export** | Save the weight frequency table as Parquet, CSV, or JSON |
 | 🔌 **Plugins** | Drop-in tab extensions — no core code changes needed |
 
@@ -167,7 +167,7 @@ Then open **http://127.0.0.1:7860** in your browser (set to automatically open w
 
 1. Select **Local** in the Load Model tab.
 2. Enter the full path to the model directory.
-3. Click **🚀 Load & Analyse**.
+3. Click **🚀 Load & Analyze**.
 
 WeightScope auto-detects the layout — single file or sharded — and processes
 all shards as a single unified analysis.
@@ -194,7 +194,7 @@ Subsequent loads of the same model are virtually instantaneous.
 1. Select **HuggingFace** in the Load Model tab.
 2. Enter a model ID such as `amd/AMD-Llama-135m` or
    `black-forest-labs/FLUX.2-klein-base-4B`.
-3. Click **🚀 Load & Analyse**.
+3. Click **🚀 Load & Analyze**.
 
 An internet connection is required.  WeightScope lists all `.safetensors`
 files in the repository and downloads every shard before analysis begins.
@@ -303,7 +303,7 @@ used in scripts or notebooks independently.
 
 ## Memory Architecture
 
-WeightScope is designed to analyse models larger than available RAM without
+WeightScope is designed to analyze models larger than available RAM without
 swapping or crashing.  The streaming engine works as follows:
 
 1. **Header parse** — the safetensors JSON header of each shard is read once
@@ -368,7 +368,7 @@ shard changes, the composite hash changes and the cache is invalidated.
 
 ### Important: clearing a stale cache
 
-If you analysed a model with an older version of WeightScope and then upgrade,
+If you analyzed a model with an older version of WeightScope and then upgrade,
 the cached result will be served from `.save_state/` without re-analysis.
 Delete the relevant subdirectory (or the entire `.save_state/` folder) to
 force a fresh analysis:

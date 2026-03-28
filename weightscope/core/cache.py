@@ -139,7 +139,7 @@ class SessionCache:
             shutil.rmtree(cache_path)
 
     def list_cached_models(self) -> list[str]:
-        """Return a list of model IDs that have cached analyses."""
+        """Return a list of model IDs that have cached analyzes."""
         return [
             p.name.replace("--", "/")
             for p in self.base_dir.iterdir()
@@ -167,7 +167,7 @@ class SessionCache:
         state_file = cache_path / "analysis_state.parquet"
 
         if not state_file.exists():
-            return "❌ No analysis data to export — load and analyse a model first"
+            return "❌ No analysis data to export — load and analyze a model first"
 
         out = Path(output_dir)
         ensure_dir(out)

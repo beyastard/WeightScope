@@ -144,7 +144,7 @@ def _np_tensor_to_keys(tensor: np.ndarray, st_dtype: str) -> Optional[Tuple[np.n
     ``(uint32_keys, dtype_label)``.
 
     Called only for dtypes in ``_ST_NP_COMPAT``.
-    Returns None if the dtype is not one WeightScope analyses.
+    Returns None if the dtype is not one WeightScope analyzes.
     """
     label = _ST_LABEL.get(st_dtype)
     if label is None:
