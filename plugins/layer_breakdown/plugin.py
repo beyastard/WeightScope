@@ -17,6 +17,25 @@ this plugin re-reads per-tensor statistics from the safetensors header and
 the frequency table, computing weighted stats per layer from available data.
 For exact per-layer distributions, individual tensor reloads would be needed;
 this plugin uses the available metadata for fast zero-reload analysis.
+
+---
+
+Copyright (C) 2026 Bryan K Reinhart & BeySoft
+
+This file is part of WeightScope.
+
+WeightScope is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+WeightScope is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public
+License along with WeightScope. If not, see <https://www.gnu.org/licenses/>.
 """
 
 from __future__ import annotations

@@ -1,5 +1,5 @@
 """
-WeightScope Plugin - Layer-by-Layer Breakdown
+WeightScope Plugin - Outlier Tensor Report
 
 Copyright (C) 2026 Bryan K Reinhart & BeySoft
 
