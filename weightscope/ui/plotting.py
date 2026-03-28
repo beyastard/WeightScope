@@ -27,6 +27,7 @@ License along with WeightScope. If not, see <https://www.gnu.org/licenses/>.
 from __future__ import annotations
 
 from typing import Optional
+from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
@@ -168,6 +169,57 @@ def create_comparison_plot(
         barmode="overlay",
     )
     return fig
+
+
+# ─── Plot saving ──────────────────────────────────────────────────────────────
+
+def save_figure(fig: go.Figure, dest: Path, fmt: str) -> None:
+    """
+    Save *fig* to *dest* in the requested format.
+
+    Parameters
+    ----------
+    fig  : Plotly Figure object
+    dest : Full output path including filename and extension
+    fmt  : ``"png"``, ``"svg"``, or ``"html"``
+
+    Raises
+    ------
+    ValueError
+        If *fmt* is not one of the supported formats.
+    ImportError
+        If ``kaleido`` is not installed and a raster/vector format is requested.
+    """
+    fmt = fmt.lower().strip()
+    dest = Path(dest)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+
+    if fmt == "html":
+        fig.write_html(str(dest), include_plotlyjs="cdn")
+        return
+
+    if fmt in ("png", "svg", "pdf", "eps"):
+        try:
+            fig.write_image(str(dest), format=fmt, scale=2 if fmt == "png" else 1)
+        except Exception as exc:
+            err = str(exc).lower()
+            
+            # kaleido ≥ 1.0 requires Chrome; 0.2.1 works headlessly
+            if "chrome" in err or "chromium" in err:
+                raise ImportError(
+                    f"Saving {fmt.upper()} failed: kaleido ≥ 1.0 requires Google Chrome. "
+                    "Use kaleido 0.2.1 instead:  pip install 'kaleido==0.2.1'"
+                ) from exc
+            
+            if "kaleido" in err or "orca" in err:
+                raise ImportError(
+                    f"Saving {fmt.upper()} requires kaleido 0.2.1: "
+                    "pip install 'kaleido==0.2.1'"
+                ) from exc
+            raise
+        return
+
+    raise ValueError(f"Unsupported plot format: {fmt!r}.  Choose 'png', 'svg', or 'html'.")
 
 
 # ─── Internal helpers ─────────────────────────────────────────────────────────

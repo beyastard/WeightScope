@@ -117,9 +117,12 @@ def build_app() -> gr.Blocks:
 
         # ── Export ───────────────────────────────────────────────────────────
         (
-            export_format, plot_format,
-            output_dir, export_btn, export_status,
-            export_data,
+            export_format, plot_format, plot_prefix,
+            output_dir,
+            export_btn, export_status, export_data,
+            vmin_export, vmax_export, log_export,
+            singletons_export, outliers_export,
+            save_plots_btn, save_plots_status, save_plots,
         ) = create_export_tab(cache)
 
         # ── Plugin tabs ──────────────────────────────────────────────────────
@@ -190,11 +193,22 @@ def build_app() -> gr.Blocks:
             outputs=[results_json, mse_plot, range_plot],
         )
 
-        # Export
+        # Export – data
         export_btn.click(
             fn=export_data,
             inputs=[current_model_id, output_dir, export_format],
             outputs=[export_status],
+        )
+
+        # Export – plots
+        save_plots_btn.click(
+            fn=save_plots,
+            inputs=[
+                current_df, current_model_id, output_dir, plot_format, plot_prefix,
+                vmin_export, vmax_export, log_export,
+                singletons_export, outliers_export,
+            ],
+            outputs=[save_plots_status],
         )
 
         # Footer
