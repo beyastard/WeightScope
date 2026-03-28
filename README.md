@@ -4,7 +4,7 @@
 and simulating the weight distributions of machine-learning models stored in
 the `.safetensors` format.
 
-> **Version 0.2.1** · AGPL-3.0 · Copyright © 2026 Bryan K Reinhart & BeySoft
+> **Version 0.2.2** · AGPL-3.0 · Copyright © 2026 Bryan K Reinhart & BeySoft
 
 [![Tests](https://img.shields.io/badge/tests-49%20passed-green)]()
 [![Python](https://img.shields.io/badge/python-3.13-blue)]()

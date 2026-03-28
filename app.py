@@ -5,7 +5,7 @@ A research tool for analyzing model weight distributions, compression potential,
 
 Supports: Any .safetensors model (Llama, Mistral, Qwen, Stable Diffusion, Whisper, BERT, etc.)
 
-New Features in v0.2.1:
+New Features in v0.2.2:
 - Clip & Normalize simulation tab
 - Query presets with Custom mode
 - Fixed scatter plot filtering (independent masks + stratified sampling)

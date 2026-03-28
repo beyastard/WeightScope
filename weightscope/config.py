@@ -30,7 +30,7 @@ from pathlib import Path
 
 # ─── App Identity ─────────────────────────────────────────────────────────────
 APP_NAME    = "WeightScope: SafeTensors Model Analyzer"
-APP_VERSION = "0.2.1"
+APP_VERSION = "0.2.2"
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
 SAVE_STATE_DIR = Path(os.environ.get("WEIGHTSCOPE_CACHE_DIR",    ".save_state"))

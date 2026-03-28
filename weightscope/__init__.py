@@ -22,4 +22,4 @@ License along with WeightScope. If not, see <https://www.gnu.org/licenses/>.
 """
 
 APP_NAME = "WeightScope: SafeTensors Model Analyzer"
-APP_VERSION = "0.2.1"
+APP_VERSION = "0.2.2"
