@@ -33,10 +33,10 @@ APP_NAME    = "WeightScope: SafeTensors Model Analyzer"
 APP_VERSION = "0.2.2"
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-SAVE_STATE_DIR = Path(os.environ.get("WEIGHTSCOPE_CACHE_DIR",    ".save_state"))
-MODELS_DIR     = Path(os.environ.get("WEIGHTSCOPE_MODELS_DIR",   "models"))
-OUTPUT_DIR     = Path(os.environ.get("WEIGHTSCOPE_OUTPUT_DIR",   "output"))
-PLUGINS_DIR    = Path(os.environ.get("WEIGHTSCOPE_PLUGINS_DIR",  "plugins"))
+SAVE_STATE_DIR = Path(os.environ.get("WEIGHTSCOPE_CACHE_DIR",   ".save_state"))
+MODELS_DIR     = Path(os.environ.get("WEIGHTSCOPE_MODELS_DIR",  "models"))
+OUTPUT_DIR     = Path(os.environ.get("WEIGHTSCOPE_OUTPUT_DIR",  "output"))
+PLUGINS_DIR    = Path(os.environ.get("WEIGHTSCOPE_PLUGINS_DIR", "plugins"))
 
 # ─── Analysis ─────────────────────────────────────────────────────────────────
 DEFAULT_PRUNING_THRESHOLD = 1e-4
