@@ -266,7 +266,7 @@ def create_load_model_tab(loader: ModelLoader, cache: SessionCache):
                 outputs=[local_path],
             )
  
-        # Load & Analyse
+        # Load & Analyze
         load_btn.click(
             fn=load_model,
             inputs=[source_radio, local_path, hf_model_id],
